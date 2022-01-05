@@ -50,6 +50,8 @@
 # bi: 必应
 # bd：百度搜索
 # ddg：DuckDuckGo 搜索
+# yh: Yahoo Japan 雅虎日本
+# nv: Naver 韩国
 # 无指令则转 Google 搜索
 
 [URL Rewrite]
@@ -164,6 +166,12 @@
 
 # ddg: DuckDuckGo 
 ^https:\/\/m.so.com\/s\?q=ddg\+([^&]+).+ https://duckduckgo.com/?ia=about&amp;q=$1 302
+
+# yh: Yahoo Japan
+^https:\/\/m.so.com\/s\?q=yh\+([^&]+).+ https://search.yahoo.co.jp/search?p=$1 302
+
+# nv: Naver Korean
+^https:\/\/m.so.com\/s\?q=nv\+([^&]+).+ https://m.search.naver.com/search.naver?query=$1 302
 
 # 无指令: 谷歌
 ^https:\/\/m.so.com\/s\?q=([^&]+).+ https://www.google.com/search?q=$1 302
